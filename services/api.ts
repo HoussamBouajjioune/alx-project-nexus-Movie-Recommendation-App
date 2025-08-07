@@ -7,6 +7,15 @@ export const TMDB_CONFIG = {
   },
 };
 
+export const fetchTVDetails = async (id: string) => {
+  const res = await fetch(`${TMDB_CONFIG.BASE_URL}/tv/${id}`, {
+    headers: TMDB_CONFIG.headers,
+  });
+  const data = await res.json();
+  return data;
+};
+
+
 export const fetchMovies = async ({
   query,
   idgenre
@@ -73,7 +82,7 @@ export const fetchTrendingMovies = async (): Promise<Movie[]> => {
   const data = await response.json();
 
   // retourne uniquement les 10 premiers
-  return data.results.slice(0, 9);
+  return data.results.slice(0, 10);
 };
 
 
@@ -105,3 +114,20 @@ export const fetchTVShows = async ({
   return data.results;
 };
 
+export const fetchTrendingTVShows = async (): Promise<TVShow[]> => {
+  const endpoint = `${TMDB_CONFIG.BASE_URL}/trending/tv/week`;
+
+  const response = await fetch(endpoint, {
+    method: "GET",
+    headers: TMDB_CONFIG.headers,
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch trending TV shows: ${response.statusText}`);
+  }
+
+  const data = await response.json();
+
+  // retourne uniquement les 10 premiers
+  return data.results.slice(0, 10);
+};

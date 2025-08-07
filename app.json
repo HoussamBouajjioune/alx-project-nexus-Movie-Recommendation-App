@@ -32,11 +32,14 @@
           "image": "./assets/images/logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#030014"
         }
       ]
 
     ],
+      "splash": {
+      "backgroundColor": "#030014"
+    },
     "experiments": {
       "typedRoutes": true
     }

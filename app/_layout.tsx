@@ -23,6 +23,13 @@ export default function RootLayout() {
             headerShown: false,
           }}
         />
+
+        <Stack.Screen
+          name="tv/[id]"
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack>
     </>
   );

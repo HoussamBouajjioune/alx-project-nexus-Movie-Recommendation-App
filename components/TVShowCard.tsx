@@ -19,7 +19,13 @@ const TVShowCard = ({
   first_air_date,
 }: TVShowCardProps) => {
   return (
-    <Link href={`/movie/${id}`} asChild>
+    <Link
+      href={{
+        pathname: "/tv/[id]",
+        params: { id: id.toString() },
+      }}
+      asChild
+    >
       <TouchableOpacity className="w-[30%]">
         <Image
           source={{
