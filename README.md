@@ -21,7 +21,6 @@ A modern mobile application built with **React Native (Expo)** that helps users 
 | **React Native (Expo)** | Cross-platform mobile development |
 | **TypeScript**  | Type safety & maintainability |
 | **TMDB API**    | Movie data & recommendations |
-| **Zustand / Context API** | Global state management |
 | **AsyncStorage** | Local storage for favorites |
 | **React Navigation** | Navigation between screens |
 | **TailwindCSS / NativeWind** | Styling |
