@@ -7,16 +7,12 @@ import {
   Image,
 } from "react-native";
 
-import { images } from "@/constants/images";
-import { icons } from "@/constants/icons";
-
 import useFetch from "@/services/usefetch";
 import { fetchMovies } from "@/services/api";
 
 import SearchBar from "@/components/SearchBar";
 import MovieDisplayCard from "@/components/MovieCard";
 import Genre from "@/components/Genre";
-// import { Movie } from "@/interfaces/interfaces"; // Assure-toi que ce type est bien défini
 
 const Search = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -87,11 +83,6 @@ const Search = () => {
 
   return (
     <View className="flex-1 bg-primary">
-      {/* <Image
-        source={images.bg}
-        className="flex-1 absolute w-full z-0"
-        resizeMode="cover"
-      /> */}
 
       <FlatList
         className="px-5"
@@ -107,10 +98,6 @@ const Search = () => {
         contentContainerStyle={{ paddingBottom: 100 }}
         ListHeaderComponent={
           <>
-            {/* <View className="w-full flex-row justify-center mt-20 items-center">
-              <Image source={icons.logo} className="w-12 h-10" />
-            </View> */}
-
             <Text className="text-2xl text-white font-bold mt-10">
               Search Movies
             </Text>
@@ -130,9 +117,7 @@ const Search = () => {
               <View className="flex-1 h-px bg-gray-400" />
             </View>
 
-            {/* <View className="mt-10 mb-5 bg-dark-200"> */}
             <Genre onSelect={handleGenreSelect} />
-            {/* </View> */}
 
             {isLoading && (
               <ActivityIndicator

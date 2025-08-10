@@ -20,20 +20,6 @@ const TrendingCard = ({
           resizeMode="cover"
         />
 
-        {/* <View className="absolute bottom-5 -left-3 px-2 py-3 rounded-full"> */}
-          {/* <MaskedView
-            maskElement={
-              <Text className="font-bold text-white text-6xl">{index + 1}</Text>
-            }
-          > */}
-            {/* <Image
-              source={images.rankingGradient}
-              className="size-14"
-              resizeMode="cover"
-            /> */}
-          {/* </MaskedView> */}
-        {/* </View> */}
-
         <Text
           className="text-sm font-bold mt-2 text-white"
           numberOfLines={2}

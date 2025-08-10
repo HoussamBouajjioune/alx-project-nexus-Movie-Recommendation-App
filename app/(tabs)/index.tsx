@@ -170,17 +170,6 @@ const Index = () => {
                   data={trendingTV}
                   keyExtractor={(item) => item.id.toString()}
                   contentContainerStyle={{ gap: 26 }}
-                  // renderItem={({ item }) => (
-                  //   <TVShowCard
-                  //     id={item.id}
-                  //     poster_path={item.poster_path}
-                  //     name={item.name}
-                  //     vote_average={item.vote_average}
-                  //     first_air_date={item.first_air_date}
-                  //   />
-                  // )}
-                  // renderItem={({ item }) => <TVShowCard {...item} />}
-
                   renderItem={({ item, index }) => <TrendingTVCard {...item} index={index} />
                   }
 
